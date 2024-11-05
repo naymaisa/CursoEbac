@@ -3,7 +3,15 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    background-color: rgb(239, 236, 224);
 }
+
+.tiny5-regular {
+    font-family: "Tiny5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 
 body {}
 
@@ -15,6 +23,12 @@ body {}
 
 form {
     margin-top: 40px;
+}
+
+h1,
+h2 {
+    color: black;
+    font-family: "Tiny5", sans-serif;
 }
 
 input,

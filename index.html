@@ -7,20 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML com JS</title>
     <link rel="stylesheet" href="./main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
-        <h1>Minha calculadora</h1>
+        <h1>Comparaçoes numericas</h1>
         <h2>Escreva um numero em cada quadrado. O numero B deve ser maior que o A.</h2>
-        <form>
-            <input type="text" required placeholder="Nome completo do beneficiário" />
-            <input type="number" required placeholder="Número da conta" />
-            <input type="number" required placeholder="Valor" />
-            <textarea placeholder="Descrição (opcional)"></textarea>
-            <button type="submit">Depositar</button>
+        <form id="form-calculator">
+            <label>Número A</label>
+            <input type="number" id="campoA" required placeholder="Numero A" />
+            <label>Número B</label>
+            <input type="number" id="campoB" required placeholder="Numero B" />
+            <button id="btn-sub" type="submit">Submeter</button>
         </form>
     </div>
+    <script src="./main.js"></script>
 </body>
 
 </html>
