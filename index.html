@@ -18,11 +18,15 @@
         <h2>Escreva um numero em cada quadrado. O numero B deve ser maior que o A.</h2>
         <form id="form-calculator">
             <label>Número A</label>
-            <input type="number" id="campoA" required placeholder="Numero A" />
+            <input type="number" id="campoA" required />
             <label>Número B</label>
-            <input type="number" id="campoB" required placeholder="Numero B" />
+            <input type="number" id="campoB" required />
+            <p class="error-message">
+                O número B precisa ser maior que o A, por favor escreva outro valor para B.
+            </p>
             <button id="btn-sub" type="submit">Submeter</button>
         </form>
+        <p class="sucess-message"></p>
     </div>
     <script src="./main.js"></script>
 </body>
