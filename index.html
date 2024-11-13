@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Bootstrap Teste</h1>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-success">
+                    Confira as novidade do blog <a href="#">clicando aqui</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Ultimas postagens</h2>
+                <div class="container g-0"> <!--g-0 é para alinhar as coisas-->
+                    <div class="row">
+                        <div class="col-md-4 post">
+                            <img src="./images/child-7070587_1280.jpg" alt="Imagem" class="imagem-tamanho">
+                            <h4 class="h5">Titulo da postagem</h4>
+                            <a class="btn btn-primary btn-sm">Leia mais</a>
+                        </div>
+                        <div class="col-md-4 post">
+                            <img src="./images/mulled-claret-8432310_1280.jpg" alt="Imagem" class="imagem-tamanho">
+                            <h4 class="h5">Titulo da postagem</h4>
+                            <a class="btn btn-primary btn-sm">Leia mais</a>
+                        </div>
+                        <div class="col-md-4 post">
+                            <img src="./images/people-9065482_1280.jpg" alt="Imagem" class="imagem-tamanho">
+                            <h4 class="h5">Titulo da postagem</h4>
+                            <a class="btn btn-primary btn-sm">Leia mais</a>
+                        </div>
+                        <div class="col-md-4 post">
+                            <img src="./images/tansy-9013813_1280.jpg" alt="Imagem" class="imagem-tamanho">
+                            <h4 class="h5">Titulo da postagem</h4>
+                            <a class="btn btn-primary btn-sm">Leia mais</a>
+                        </div>
+                        <div class="col-md-4 post">
+                            <img src="./images/vicuna-9094152_1280.jpg" alt="Imagem" class="imagem-tamanho">
+                            <h4 class="h5">Titulo da postagem</h4>
+                            <a class="btn btn-primary btn-sm">Leia mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex justify-content-end">
+                <!--d-flex = display flex, que ajusta as coisas,justify-content-end coloca no final da pagina horizontalmente -->
+                <div>
+                    <h2 class="h4">Anunciantes</h2>
+                    <img src="./images/child-7070587_1280.jpg" alt="Imagem" class="imagem-tamanho">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2>Entre em contato</h2>
+                <form>
+                    <label class="form-label" for="nome">Seu nome:</label>
+                    <input class="form-control" type="text" id="nome">
+                    <label class="form-label" for="email">Seu email:</label>
+                    <input class="form-control" type="email" id="email">
+                    <label class="form-label" for="mensagem">Sua mensagem:</label>
+                    <textarea class="form-control" id="mensagem"></textarea>
+                    <div class="form-check form-switch">
+                        <label class="form-check-label" for="aceito-termos">Li e concordo com os termos do site</label>
+                        <input class="form-check-input" type="checkbox" id="aceito-termos">
+                    </div>
+                    <button class="btn btn-success">Enviar</button-btn>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
