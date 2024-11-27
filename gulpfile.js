@@ -1,32 +1,34 @@
+//carrega a funcionalidade do gulp para o codigo
 const gulp = require('gulp');
+//importa o pacote, é uma integraçao entre gulp e o sass. utiliza o sass para transformar arquivos scss em .css
 const sass = require('gulp-sass')(require('sass'));
+//importa o modulo que permite gerar mapas de origem para arquivos css ou js
+const sourcemaps = require('gulp-sourcemaps');
+const imagemin = require('gulp-imagemin');
 
-// Função para compilar Sass
+
+//importante para comprimir as imagens para nao comprometer a internet do usuario, diminui as img
+function comprimeImagens() {
+    return gulp.src('./source/images/**/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('./build/images'));
+}
+
+
+//compilaçao sass com o gulp e compressao do arquivo
 function compilaSass() {
-    return gulp.src('./source/styles/*.scss')  // Caminho dos arquivos .scss
-        .pipe(sass().on('error', sass.logError))  // Compilação Sass e tratamento de erro
-        .pipe(gulp.dest('./build/styles'));  // Destino dos arquivos compilados
+    return gulp.src('./source/styles/main.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            outputStyle: 'compressed'
+        }))
+        .pipe(sourcemaps.write('./maps'))
+        .pipe(gulp.dest('./build/styles'));
 }
 
-// Função padrão
-function funcaoPadrao(callback) {
-    console.log("Executando via Gulp");
-    callback();  // Sinaliza que a tarefa foi concluída
-}
 
-// Função que diz oi
-function dizOi(callback) {
-    console.log("Ola Gulp");
-    dizTchau();
-    callback();  // Sinaliza que a tarefa foi concluída
-}
 
-// Função que diz tchau
-function dizTchau() {
-    console.log("Tchau Gulp");
+exports.default = function () {
+    gulp.watch('./source/styles/*.scss', { ignoreInitial: false }, gulp.series(compilaSass));
+    gulp.watch('./source/images/**/*', { ignoreInitial: false }, gulp.series(comprimeImagens));
 }
-
-// Exportando as tarefas
-exports.default = gulp.series(funcaoPadrao, dizOi);  // A execução de tarefas será em série
-exports.dizOi = dizOi;
-exports.sass = compilaSass;
