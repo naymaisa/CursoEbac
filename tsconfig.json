@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist", // Pasta de saída para os arquivos .js compilados
+    "rootDir": "./src", // Pasta de origem dos arquivos .ts
+    "target": "es6", // Definir o ECMAScript alvo
+    "module": "commonjs" // Tipo de módulo (para Node.js)
+  },
+  "include": [
+    "src/**/*.ts" // Incluir todos os arquivos .ts da pasta src
+  ]
+}
